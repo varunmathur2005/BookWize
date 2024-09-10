@@ -19,7 +19,10 @@ A Book Recommender System built using Python that suggests books based on popula
    ```bash
    pip install -r requirements.txt
    ```
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/60a7bcc9-e6fa-4140-bee8-164ef875639c">
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/86454102-0220-49fc-aed0-dee4d0e69ec7">
 
-## **How It Works**
+
+
 
 

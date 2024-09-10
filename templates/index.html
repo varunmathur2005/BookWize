@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender System</title>
+    <!-- Latest Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .navbar {
+            background-color: #00796b;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .card img {
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #444;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .text-white {
+            color: #e0e0e0 !important;
+        }
+        .btn-custom {
+            background-color: #00796b;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">My Book Recommender</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/recommend">Recommend</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4" style="font-size:50px">Top 50 Books</h1>
+        <div class="row">
+            {% for i in range(book_name|length) %}
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ image[i] }}" alt="Book Cover">
+                        <div class="card-body">
+                            <h5>{{ book_name[i] }}</h5>
+                            <p>{{ author[i] }}</p>
+                            <p>Votes: {{ votes[i] }}</p>
+                            <p>Rating: {{ rating[i] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

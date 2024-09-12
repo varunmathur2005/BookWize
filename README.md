@@ -1,4 +1,4 @@
-# BookWise
+# BookWize
 A Book Recommender System built using Python that suggests books based on popularity and collaborative filtering techniques. This project utilizes data from the Kaggle Book Recommendation Dataset to provide personalized book recommendations.
 
 ## **Features**
